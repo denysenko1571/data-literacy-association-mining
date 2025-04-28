@@ -13,6 +13,8 @@ It is done as a potential part of my work for the Introduction to Research in In
 
 - Clear, human-readable output to easily understand the most important patterns.
 
+## 📝 Code Demonsration
+![til](https://github.com/denysenko1571/data-literacy-association-mining/blob/main/Code_Demonstration_AR.gif)
 
 
 
