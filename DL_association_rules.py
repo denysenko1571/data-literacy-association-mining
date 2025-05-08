@@ -1,17 +1,16 @@
-# Import libraries
+# Importing libraries
 import pandas as pd
 from mlxtend.frequent_patterns import fpgrowth
 from mlxtend.frequent_patterns import association_rules
 
-# Load the dataset
+# Loading the refined dataset
 data = pd.read_excel("/Users/denysenko/Desktop/refined_database.xlsx")
 
 # Checking the data
 print("Data loaded successfully")
 print(data.head())
 
-# Preprocess: create a binary version of the data
-# 1 if value exists, 0 otherwise
+# Preprocess
 binary_data = data.notnull()
 binary_data = binary_data.astype(int)
 
@@ -39,10 +38,6 @@ def set_to_string(x):
 
 rules['antecedents'] = rules['antecedents'].apply(set_to_string)
 rules['consequents'] = rules['consequents'].apply(set_to_string)
-
-# Save results
-frequent_itemsets.to_csv("frequent_itemsets.csv", index=False)
-rules.to_csv("association_rules.csv", index=False)
 
 # Show top rules by lift
 print("Top Association Rules:")
